@@ -19,18 +19,63 @@ public class Program
             {
                 case 1:
                     int aleatorio;
-                  Random generador = new Random();
-                    aleatorio = generador.Next();
+                    bool exit;
+                    Random generador = new Random();
+                    aleatorio = generador.Next(0, 51);
                     do
                     {
                         int num;
+                       
                         for (int i = 1; i <= 2; i++) ;
+                        Console.WriteLine("Digita el número");
+                        num = int.Parse(Console.ReadLine());
+                        if (num > aleatorio)
+                        {
+                            Console.WriteLine("El numero es menor, siguiente jugador");
+
+                        }
+                        else if (num < aleatorio)
+                        {
+                            Console.WriteLine("El numero es mayor");
+                        }
+                        else if (num == aleatorio) 
+                        {
+                         exit = false;
+                        
+                        } 
+                    } while (exit == true);
+
+
+                case 2:
+                    int aleatorio;
+                    Random generador = new Random();
+                    aleatorio = generador.Next(0, 101);
+                    do
+                    {
+                        int num;
+                        for (int i = 1; i <= 3; i++) ;
                         Console.WriteLine("Digita el número");
                         num = int.Parse(Console.ReadLine());
 
                     } while (true);
+
+
+                case 3:
+                    int aleatorio;
+                    Random generador = new Random();
+                    aleatorio = generador.Next(0, 200);
+                    do
+                    {
+                        int num;
+                        for (int i = 1; i <= 4; i++) ;
+                        Console.WriteLine("Digita el número");
+                        num = int.Parse(Console.ReadLine());
+
+                    } while (true);
+
+
+
             }
-              
 
 
 
@@ -47,7 +92,8 @@ public class Program
 
 
 
-                    Console.WriteLine("Digita 1 par volver a jugar o 0 para terminar");
+
+            Console.WriteLine("Digita 1 par volver a jugar o 0 para terminar");
                     salir = int.Parse(Console.ReadLine());
                     if (salir == 0)
                     {
