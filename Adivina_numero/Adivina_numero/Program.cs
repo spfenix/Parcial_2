@@ -17,11 +17,12 @@ public class Program
             salir = int.Parse(Console.ReadLine());
             if (salir == 0)
             {
-                validador = false;
+                validador = false ;
 
 
-            }
-        } while (validador = true);
+            }else validador = true ;
+
+        } while (validador == true);
 
 
-    }   
+}   }
